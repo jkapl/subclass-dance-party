@@ -2,6 +2,8 @@ var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
   MakeDancer.call(this, top, left, timeBetweenSteps);
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
+  this.$node.prepend('<img id="flippyDancer" src="https://purepng.com/public/uploads/large/purepng.com-ghostghosthauntpoltergeistspiritghosts-17015277760781bgk4.png"/>');
+  this.$node.css('border', '0px');
 };
 
 MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
